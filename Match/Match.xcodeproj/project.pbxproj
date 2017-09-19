@@ -12,6 +12,8 @@
 		EF850C451F7098830029BD09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF850C431F7098830029BD09 /* Main.storyboard */; };
 		EF850C471F7098830029BD09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF850C461F7098830029BD09 /* Assets.xcassets */; };
 		EF850C4A1F7098830029BD09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF850C481F7098830029BD09 /* LaunchScreen.storyboard */; };
+		EFDED8921F709C1300C7567C /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDED8911F709C1300C7567C /* Card.swift */; };
+		EFDED8941F709C7A00C7567C /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFDED8931F709C7A00C7567C /* CardModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		EF850C461F7098830029BD09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF850C491F7098830029BD09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF850C4B1F7098830029BD09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFDED8911F709C1300C7567C /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		EFDED8931F709C7A00C7567C /* CardModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,8 @@
 			children = (
 				EF850C3F1F7098830029BD09 /* AppDelegate.swift */,
 				EF850C411F7098830029BD09 /* ViewController.swift */,
+				EFDED8911F709C1300C7567C /* Card.swift */,
+				EFDED8931F709C7A00C7567C /* CardModel.swift */,
 				EF850C431F7098830029BD09 /* Main.storyboard */,
 				EF850C461F7098830029BD09 /* Assets.xcassets */,
 				EF850C481F7098830029BD09 /* LaunchScreen.storyboard */,
@@ -138,6 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF850C421F7098830029BD09 /* ViewController.swift in Sources */,
+				EFDED8941F709C7A00C7567C /* CardModel.swift in Sources */,
+				EFDED8921F709C1300C7567C /* Card.swift in Sources */,
 				EF850C401F7098830029BD09 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -302,6 +310,7 @@
 				EF850C501F7098830029BD09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

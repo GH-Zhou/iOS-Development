@@ -9,10 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    let model = CardModel() // create a new card model
+    
+    var cards = [Card]() // card array can be accessed in this class SCOPE
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        cards = model.getCards()
     }
 
     override func didReceiveMemoryWarning() {
