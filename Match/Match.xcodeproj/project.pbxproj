@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF41B0631F736C1A001065D2 /* cardflip.wav in Resources */ = {isa = PBXBuildFile; fileRef = EF41B05F1F736C1A001065D2 /* cardflip.wav */; };
+		EF41B0641F736C1A001065D2 /* dingcorrect.wav in Resources */ = {isa = PBXBuildFile; fileRef = EF41B0601F736C1A001065D2 /* dingcorrect.wav */; };
+		EF41B0651F736C1A001065D2 /* dingwrong.wav in Resources */ = {isa = PBXBuildFile; fileRef = EF41B0611F736C1A001065D2 /* dingwrong.wav */; };
+		EF41B0661F736C1A001065D2 /* shuffle.wav in Resources */ = {isa = PBXBuildFile; fileRef = EF41B0621F736C1A001065D2 /* shuffle.wav */; };
+		EF41B0691F736C51001065D2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF41B0681F736C51001065D2 /* AVFoundation.framework */; };
 		EF850C401F7098830029BD09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF850C3F1F7098830029BD09 /* AppDelegate.swift */; };
 		EF850C421F7098830029BD09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF850C411F7098830029BD09 /* ViewController.swift */; };
 		EF850C451F7098830029BD09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF850C431F7098830029BD09 /* Main.storyboard */; };
@@ -17,6 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF41B05F1F736C1A001065D2 /* cardflip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cardflip.wav; sourceTree = "<group>"; };
+		EF41B0601F736C1A001065D2 /* dingcorrect.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dingcorrect.wav; sourceTree = "<group>"; };
+		EF41B0611F736C1A001065D2 /* dingwrong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dingwrong.wav; sourceTree = "<group>"; };
+		EF41B0621F736C1A001065D2 /* shuffle.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = shuffle.wav; sourceTree = "<group>"; };
+		EF41B0681F736C51001065D2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		EF850C3C1F7098830029BD09 /* Match.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Match.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF850C3F1F7098830029BD09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF850C411F7098830029BD09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,17 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF41B0691F736C51001065D2 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF41B05E1F736BE5001065D2 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				EF41B05F1F736C1A001065D2 /* cardflip.wav */,
+				EF41B0601F736C1A001065D2 /* dingcorrect.wav */,
+				EF41B0611F736C1A001065D2 /* dingwrong.wav */,
+				EF41B0621F736C1A001065D2 /* shuffle.wav */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		EF41B0671F736C51001065D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF41B0681F736C51001065D2 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EF850C331F7098830029BD09 = {
 			isa = PBXGroup;
 			children = (
 				EF850C3E1F7098830029BD09 /* Match */,
 				EF850C3D1F7098830029BD09 /* Products */,
+				EF41B0671F736C51001065D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,6 +89,7 @@
 		EF850C3E1F7098830029BD09 /* Match */ = {
 			isa = PBXGroup;
 			children = (
+				EF41B05E1F736BE5001065D2 /* Sounds */,
 				EF850C3F1F7098830029BD09 /* AppDelegate.swift */,
 				EF850C411F7098830029BD09 /* ViewController.swift */,
 				EFDED8911F709C1300C7567C /* Card.swift */,
@@ -131,6 +163,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF850C4A1F7098830029BD09 /* LaunchScreen.storyboard in Resources */,
+				EF41B0641F736C1A001065D2 /* dingcorrect.wav in Resources */,
+				EF41B0651F736C1A001065D2 /* dingwrong.wav in Resources */,
+				EF41B0661F736C1A001065D2 /* shuffle.wav in Resources */,
+				EF41B0631F736C1A001065D2 /* cardflip.wav in Resources */,
 				EF850C471F7098830029BD09 /* Assets.xcassets in Resources */,
 				EF850C451F7098830029BD09 /* Main.storyboard in Resources */,
 			);

@@ -54,24 +54,31 @@
                                     <constraint firstAttribute="trailing" secondItem="0Ry-i7-Tjm" secondAttribute="trailing" id="k8i-YR-dEg"/>
                                 </constraints>
                             </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BK-dB-JfL">
+                                <rect key="frame" x="40" y="40" width="26.5" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.70356514084507038" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BRe-ke-M44" secondAttribute="bottom" id="23Q-Cu-E2i"/>
                             <constraint firstItem="BRe-ke-M44" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="9Cd-xW-T3o"/>
-                            <constraint firstItem="ew4-Zt-ijW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FNs-71-kNh"/>
                             <constraint firstAttribute="trailing" secondItem="ew4-Zt-ijW" secondAttribute="trailing" id="LcC-ca-3ar"/>
                             <constraint firstItem="ew4-Zt-ijW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="RcW-z6-G19"/>
+                            <constraint firstItem="5BK-dB-JfL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="WSJ-yb-5p5"/>
                             <constraint firstItem="ew4-Zt-ijW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="WZb-FL-hjF"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ew4-Zt-ijW" secondAttribute="bottom" id="YNT-dy-P1h"/>
+                            <constraint firstItem="5BK-dB-JfL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="cvV-JV-59t"/>
                             <constraint firstAttribute="trailing" secondItem="BRe-ke-M44" secondAttribute="trailing" id="d5o-jH-hvd"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ew4-Zt-ijW" secondAttribute="trailing" id="drL-O0-5as"/>
                             <constraint firstItem="ew4-Zt-ijW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hRd-vz-xS6"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ew4-Zt-ijW" secondAttribute="bottom" id="iy6-oB-QEH"/>
                             <constraint firstItem="BRe-ke-M44" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="vwK-KN-bE9"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="countdownLabel" destination="5BK-dB-JfL" id="231-fJ-bEB"/>
                         <outlet property="firstStackView" destination="tOA-0I-Cyg" id="n8H-V7-Wtf"/>
                         <outlet property="fourthStackView" destination="KqL-CF-HfS" id="U71-wg-BlW"/>
                         <outlet property="secondStackView" destination="EZG-KU-yeC" id="NZ4-eW-QPh"/>
@@ -84,6 +91,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="background" width="667" height="621"/>
+        <image name="background" width="736" height="414"/>
     </resources>
 </document>
