@@ -105,24 +105,32 @@ class ViewController: UIViewController {
             }
             
             var popUpMessage = ""
+            var titleText = ""
             if userHasMatchedAllCards {
                 // Game is won
+                titleText = "Congratulations!"
                 popUpMessage = "You won!"
                 
             } else {
                 // Game is lost
+                titleText = "Time's Up!"
                 popUpMessage = "You lost!"
                 
             }
             
             // Create alert
-            let alert = UIAlertController(title: "Time's Up!", message: popUpMessage, preferredStyle: .alert)
+            let alert = UIAlertController(title: titleText, message: popUpMessage, preferredStyle: .alert)
             
             // Create alert action
-            let alertAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            let alertAction = UIAlertAction(title: "Play again", style: .cancel, handler: { (alert) in
+                self.restart()
+            })
+            let alertAction2 = UIAlertAction(title: "OK", style: .default, handler: nil)
             
             // Attach action to alert
             alert.addAction(alertAction)
+            alert.addAction(alertAction2)
+            
             
             present(alert, animated: true, completion: nil)
             
@@ -212,6 +220,9 @@ class ViewController: UIViewController {
                     card.isMatched = true
                     revealedCard?.isMatched = true
                     
+                    // Check if all pairs have been matched
+                    checkPairs()
+                    
                 } else {
                     // Cards don't match
                     
@@ -230,6 +241,62 @@ class ViewController: UIViewController {
             }
         }
         
+    }
+    
+    func checkPairs() {
+        
+        // Check if all the pairs have been matched
+        var allMatched = true
+        for card in cards {
+            if !card.isMatched {
+                allMatched = false
+                break
+            }
+        }
+        
+        // Check if it's all matched
+        if allMatched {
+            
+            // User has won and show alert
+            // Stop the timer
+            timer?.invalidate()
+            
+            // Create alert
+            let alert = UIAlertController(title: "Congratulations!", message: "You won!", preferredStyle: .alert)
+            
+            // Create alert action
+            let alertAction = UIAlertAction(title: "Play again", style: .cancel, handler: { (alert) in
+                self.restart()
+            })
+            let alertAction2 = UIAlertAction(title: "OK", style: .default, handler: nil)
+            
+            // Attach action to alert
+            alert.addAction(alertAction)
+            alert.addAction(alertAction2)
+            
+            present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func restart() {
+        
+        // Clear out all cards
+        for card in cards {
+            card.removeFromSuperview()
+        }
+        
+        // Get the cards
+        cards = model.getCards()
+        
+        // Layout the cards
+        layoutCards()
+        
+        // Set the countdown label
+        countdown = 45
+        countdownLabel.text = String(countdown)
+        
+        // Create and schedule a timer
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerUpdate), userInfo: nil, repeats: true) // every second repeat until stopped
     }
 
     override func didReceiveMemoryWarning() {
