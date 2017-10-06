@@ -15,6 +15,7 @@
 		EF2AE1341F74BABD00D00715 /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AE1331F74BABD00D00715 /* QuizModel.swift */; };
 		EF2AE1361F74BADA00D00715 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2AE1351F74BADA00D00715 /* Question.swift */; };
 		EF2AE1381F74D5A700D00715 /* QuestionData.json in Resources */ = {isa = PBXBuildFile; fileRef = EF2AE1371F74D5A700D00715 /* QuestionData.json */; };
+		EFCD33AF1F832AE7005F0609 /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFCD33AE1F832AE7005F0609 /* AnswerButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		EF2AE1331F74BABD00D00715 /* QuizModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
 		EF2AE1351F74BADA00D00715 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		EF2AE1371F74D5A700D00715 /* QuestionData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = QuestionData.json; sourceTree = "<group>"; };
+		EFCD33AE1F832AE7005F0609 /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				EF2AE1231F74BA7800D00715 /* ViewController.swift */,
 				EF2AE1331F74BABD00D00715 /* QuizModel.swift */,
 				EF2AE1351F74BADA00D00715 /* Question.swift */,
+				EFCD33AE1F832AE7005F0609 /* AnswerButton.swift */,
 				EF2AE1371F74D5A700D00715 /* QuestionData.json */,
 				EF2AE1251F74BA7800D00715 /* Main.storyboard */,
 				EF2AE1281F74BA7800D00715 /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFCD33AF1F832AE7005F0609 /* AnswerButton.swift in Sources */,
 				EF2AE1241F74BA7800D00715 /* ViewController.swift in Sources */,
 				EF2AE1361F74BADA00D00715 /* Question.swift in Sources */,
 				EF2AE1341F74BABD00D00715 /* QuizModel.swift in Sources */,
@@ -314,6 +318,7 @@
 				EF2AE1321F74BA7800D00715 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
