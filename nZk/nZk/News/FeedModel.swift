@@ -8,10 +8,16 @@
 
 import UIKit
 
+protocol FeedModelDelegate { // customized protocol
+    func articlesReady()
+}
+
 class FeedModel: NSObject, XMLParserDelegate { // protocol is after ","
     
     var url = "http://www.sh-nzk.net/xml/artInfoRSS.php?id=70007946"
     var articles = [Article]()
+    
+    var delegate:FeedModelDelegate? // should be NewsViewController in this case
     
     // Parsed variables
     var newArticle:Article?
@@ -69,12 +75,29 @@ class FeedModel: NSObject, XMLParserDelegate { // protocol is after ","
             
             // Save the newString as the body for newArticle
             newArticle?.articleBody = newString
+            
+            // Search for HTTP
+            if let startRange = newString.range(of: "http") {
+                
+                // Found http. Now look for .jpg or .png
+                if let endRange = newString.range(of: ".jpg") {
+                    
+                    // Found .jpg. Now get the substring
+                    let substring = newString[startRange.lowerBound..<endRange.upperBound]
+                    newArticle?.articleImageUrl = String(substring)
+                } else if let endRange = newString.range(of: ".png") {
+                    
+                    // Found .png. Now get the substring
+                    let substring = newString[startRange.lowerBound..<endRange.upperBound]
+                    newArticle?.articleImageUrl = String(substring)
+                }
+            }
+            
         } else if elementName == "link" {
             
-            // Save the href attribute as the article url for newArticle
-            if let href = linkAttributes["href"] {
-                newArticle?.articleLink = href
-            }
+            // Save the newString as the article url for newArticle
+            newArticle?.articleLink = newString.trimmingCharacters(in: .whitespacesAndNewlines)
+            
         } else if elementName == "item" {
             
             // Save the newArticle into the array
@@ -94,6 +117,9 @@ class FeedModel: NSObject, XMLParserDelegate { // protocol is after ","
     func parserDidEndDocument(_ parser: XMLParser) {
         
         // When the feed is parsed, we want to notify the delegate
-        
+        // Check if the delegate is nil, if not, call articlesReady()
+        if let actualDelegate = delegate {
+            actualDelegate.articlesReady()
+        }
     }
 }

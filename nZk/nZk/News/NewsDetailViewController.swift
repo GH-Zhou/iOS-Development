@@ -7,13 +7,42 @@
 //
 
 import UIKit
+import WebKit
 
-class NewsDetailViewController: UIViewController {
+class NewsDetailViewController: UIViewController, WKUIDelegate {
 
+    var articleToDisplay:Article?
+    
+    @IBOutlet var webView: WKWebView!
+    
+    override func loadView() {
+        let webConfiguration = WKWebViewConfiguration()
+        webView = WKWebView(frame: .zero, configuration: webConfiguration)
+        webView.uiDelegate = self
+        view = webView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        if let article = articleToDisplay {
+            
+            // if article exists, load it in the webView
+            
+            // Create URL object
+            let url = URL(string: article.articleLink)
+            
+            if let actualUrl = url {
+                // if URL object exists, create URLRequest object
+                let request = URLRequest(url: actualUrl)
+                
+                // Load the request in the webView
+                webView.load(request)
+            }
+            
+        }
     }
 
     override func didReceiveMemoryWarning() {
