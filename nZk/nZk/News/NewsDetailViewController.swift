@@ -27,6 +27,9 @@ class NewsDetailViewController: UIViewController, WKUIDelegate {
 
         // Do any additional setup after loading the view.
         
+        // Create a UIImageView and add it to the navigation bar
+        createTitleIcon()
+        
         if let article = articleToDisplay {
             
             // if article exists, load it in the webView
@@ -43,6 +46,26 @@ class NewsDetailViewController: UIViewController, WKUIDelegate {
             }
             
         }
+    }
+    
+    func createTitleIcon() {
+        
+        // Create the UIImageView
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Create constraints
+        let heightConstraint = NSLayoutConstraint(item: imageView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 55)
+        let widthConstraint = NSLayoutConstraint(item: imageView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 55)
+        
+        // Add constraints
+        imageView.addConstraints([heightConstraint, widthConstraint])
+        
+        // Set the image
+        imageView.image = UIImage(named: "nZkLogo")
+        
+        // Add it to the navigation bar
+        navigationItem.titleView = imageView
     }
 
     override func didReceiveMemoryWarning() {

@@ -9,7 +9,11 @@
 /* Begin PBXBuildFile section */
 		EF22F47B1F8B23CD00E34C2D /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF22F47A1F8B23CD00E34C2D /* FeedModel.swift */; };
 		EF22F47D1F8B23DC00E34C2D /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF22F47C1F8B23DC00E34C2D /* Article.swift */; };
+		EF28D7331F91465B000E0144 /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF28D7321F91465B000E0144 /* QuizModel.swift */; };
+		EF3F7A231F913C8800719334 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3F7A221F913C8800719334 /* Question.swift */; };
+		EF3F7A251F9142B600719334 /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3F7A241F9142B600719334 /* AnswerButton.swift */; };
 		EF5395371F8F1C5200A961CE /* DiscographyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5395361F8F1C5200A961CE /* DiscographyCollectionViewCell.swift */; };
+		EF8DDA8A1F8FF00900F2DF15 /* DiscographyDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8DDA891F8FF00900F2DF15 /* DiscographyDetailViewController.swift */; };
 		EF90698C1F8F14850087D0F9 /* DiscographyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF90698B1F8F14850087D0F9 /* DiscographyCollectionViewController.swift */; };
 		EFD993081F8B1EC8007692EC /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD993071F8B1EC8007692EC /* AboutViewController.swift */; };
 		EFD9930E1F8B1FB7007692EC /* NewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFD9930D1F8B1FB7007692EC /* NewsViewController.swift */; };
@@ -27,7 +31,12 @@
 /* Begin PBXFileReference section */
 		EF22F47A1F8B23CD00E34C2D /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		EF22F47C1F8B23DC00E34C2D /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		EF28D7321F91465B000E0144 /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
+		EF3F7A1F1F913C0300719334 /* QuestionData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = QuestionData.json; sourceTree = "<group>"; };
+		EF3F7A221F913C8800719334 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		EF3F7A241F9142B600719334 /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
 		EF5395361F8F1C5200A961CE /* DiscographyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscographyCollectionViewCell.swift; sourceTree = "<group>"; };
+		EF8DDA891F8FF00900F2DF15 /* DiscographyDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscographyDetailViewController.swift; sourceTree = "<group>"; };
 		EF90698B1F8F14850087D0F9 /* DiscographyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscographyCollectionViewController.swift; sourceTree = "<group>"; };
 		EFD993071F8B1EC8007692EC /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		EFD9930D1F8B1FB7007692EC /* NewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +90,7 @@
 				EFF274B21F8DBC89008C233F /* Discography.swift */,
 				EF90698B1F8F14850087D0F9 /* DiscographyCollectionViewController.swift */,
 				EF5395361F8F1C5200A961CE /* DiscographyCollectionViewCell.swift */,
+				EF8DDA891F8FF00900F2DF15 /* DiscographyDetailViewController.swift */,
 			);
 			path = Discography;
 			sourceTree = "<group>";
@@ -89,6 +99,10 @@
 			isa = PBXGroup;
 			children = (
 				EFD993141F8B1FED007692EC /* QuizViewController.swift */,
+				EF3F7A1F1F913C0300719334 /* QuestionData.json */,
+				EF3F7A221F913C8800719334 /* Question.swift */,
+				EF3F7A241F9142B600719334 /* AnswerButton.swift */,
+				EF28D7321F91465B000E0144 /* QuizModel.swift */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
@@ -198,13 +212,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF3F7A231F913C8800719334 /* Question.swift in Sources */,
 				EF90698C1F8F14850087D0F9 /* DiscographyCollectionViewController.swift in Sources */,
+				EF8DDA8A1F8FF00900F2DF15 /* DiscographyDetailViewController.swift in Sources */,
 				EFD993081F8B1EC8007692EC /* AboutViewController.swift in Sources */,
+				EF28D7331F91465B000E0144 /* QuizModel.swift in Sources */,
 				EFD993151F8B1FED007692EC /* QuizViewController.swift in Sources */,
 				EF22F47D1F8B23DC00E34C2D /* Article.swift in Sources */,
 				EFE2B0B91F89E6E500FB4673 /* ViewController.swift in Sources */,
 				EFE2B0B71F89E6E500FB4673 /* AppDelegate.swift in Sources */,
 				EFD9930E1F8B1FB7007692EC /* NewsViewController.swift in Sources */,
+				EF3F7A251F9142B600719334 /* AnswerButton.swift in Sources */,
 				EFF274AF1F8DBAE4008C233F /* DiscographyModel.swift in Sources */,
 				EFF274B31F8DBC89008C233F /* Discography.swift in Sources */,
 				EFD993101F8B1FCC007692EC /* NewsDetailViewController.swift in Sources */,
