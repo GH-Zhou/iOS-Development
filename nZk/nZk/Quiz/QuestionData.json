@@ -1,0 +1,44 @@
+[
+	{
+		"question":"この曲はあるドラマのメインテーマです。どのドラマですか。",
+		"answers":["BOSS", "CRISIS 公安機動捜査隊特捜班", "医龍", "まれ"],
+		"correctIndex":1,
+		"module":3,
+		"lesson":0,
+		"feedback":"関西テレビドラマ「CRISIS 公安機動捜査隊特捜班」のテーマ曲です。タイトル「9a14s」は「CRISIS」という意味です。"
+	},
+	{
+		"question":"この曲のタイトルは何ですか。",
+		"answers":["Anxiety", "MARKS", "Itsuka", "Ace and Arms"],
+		"correctIndex":3,
+		"module":3,
+		"lesson":0,
+		"feedback":"「Ace and Arms」は正しいです。NHKスペシャル「ミラクルボディー」のテーマ曲です。"
+	},
+	{
+		"question":"この曲は誰が歌っていますか。",
+		"answers":["小林未郁", "mizuki", "Gemie", "Tielle"],
+		"correctIndex":1,
+		"module":3,
+		"lesson":0,
+		"feedback":"mizukiさんの得意作品、テレビアニメ「アルドノア・ゼロ」の第二弾エンディングです。他のバージョン「MKAlieZ」でボーカリストは小林未郁さんです。"
+	},
+	{
+		"question":"この曲のタイトルは何ですか。",
+		"answers":["AL:Lu", "Shout", "God of Ink", "BRAVE THE OCEAN"],
+		"correctIndex":0,
+		"module":3,
+		"lesson":0,
+		"feedback":"「AL:Lu」はテレビアニメ「Re:CREATORS」のサウンドトラックです。似てるリズムですけど、第二弾オープニング「Shout」じゃありませんね。"
+	},
+	{
+		"question":"この曲はあるゲームのテーマ曲です。どのゲームですか。",
+		"answers":["三国志英歌", "XenobladeX", "ボーダーブレイク", "ソウルリバース・ゼロ"],
+		"correctIndex":2,
+		"module":3,
+		"lesson":0,
+		"feedback":"「ボーダーブレイク」は正しいです。これは「Amazing Trees」という曲で、最新nZkアルバム「2V-ALK」で人気な曲です。"
+	}
+
+
+]
