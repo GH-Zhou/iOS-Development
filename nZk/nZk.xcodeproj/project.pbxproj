@@ -10,6 +10,17 @@
 		EF22F47B1F8B23CD00E34C2D /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF22F47A1F8B23CD00E34C2D /* FeedModel.swift */; };
 		EF22F47D1F8B23DC00E34C2D /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF22F47C1F8B23DC00E34C2D /* Article.swift */; };
 		EF28D7331F91465B000E0144 /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF28D7321F91465B000E0144 /* QuizModel.swift */; };
+		EF28D7571F9157D3000E0144 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF28D7561F9157D3000E0144 /* AVFoundation.framework */; };
+		EF28D7581F915E28000E0144 /* 9a14s.m4a in Resources */ = {isa = PBXBuildFile; fileRef = EF28D74B1F915790000E0144 /* 9a14s.m4a */; };
+		EF28D7591F915E28000E0144 /* Ace and Arms.m4a in Resources */ = {isa = PBXBuildFile; fileRef = EF28D74C1F915790000E0144 /* Ace and Arms.m4a */; };
+		EF28D75A1F915E28000E0144 /* aLIEz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = EF28D74D1F915790000E0144 /* aLIEz.m4a */; };
+		EF28D75B1F915E28000E0144 /* aLLu.m4a in Resources */ = {isa = PBXBuildFile; fileRef = EF28D74E1F915790000E0144 /* aLLu.m4a */; };
+		EF28D75C1F915E28000E0144 /* Amazing Trees.m4a in Resources */ = {isa = PBXBuildFile; fileRef = EF28D74F1F915790000E0144 /* Amazing Trees.m4a */; };
+		EF28D75D1F915E28000E0144 /* Attack on Titan.m4a in Resources */ = {isa = PBXBuildFile; fileRef = EF28D7501F915790000E0144 /* Attack on Titan.m4a */; };
+		EF28D75E1F915E28000E0144 /* Bios.m4a in Resources */ = {isa = PBXBuildFile; fileRef = EF28D7511F915790000E0144 /* Bios.m4a */; };
+		EF28D75F1F915E28000E0144 /* BLUE DRAGON.m4a in Resources */ = {isa = PBXBuildFile; fileRef = EF28D7521F915790000E0144 /* BLUE DRAGON.m4a */; };
+		EF28D7601F915E28000E0144 /* fiore.m4a in Resources */ = {isa = PBXBuildFile; fileRef = EF28D7531F915790000E0144 /* fiore.m4a */; };
+		EF28D7611F915E28000E0144 /* UNICORN.m4a in Resources */ = {isa = PBXBuildFile; fileRef = EF28D7541F915790000E0144 /* UNICORN.m4a */; };
 		EF3F7A231F913C8800719334 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3F7A221F913C8800719334 /* Question.swift */; };
 		EF3F7A251F9142B600719334 /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3F7A241F9142B600719334 /* AnswerButton.swift */; };
 		EF5395371F8F1C5200A961CE /* DiscographyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5395361F8F1C5200A961CE /* DiscographyCollectionViewCell.swift */; };
@@ -32,6 +43,17 @@
 		EF22F47A1F8B23CD00E34C2D /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
 		EF22F47C1F8B23DC00E34C2D /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		EF28D7321F91465B000E0144 /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
+		EF28D74B1F915790000E0144 /* 9a14s.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = 9a14s.m4a; sourceTree = "<group>"; };
+		EF28D74C1F915790000E0144 /* Ace and Arms.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ace and Arms.m4a"; sourceTree = "<group>"; };
+		EF28D74D1F915790000E0144 /* aLIEz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = aLIEz.m4a; sourceTree = "<group>"; };
+		EF28D74E1F915790000E0144 /* aLLu.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = aLLu.m4a; sourceTree = "<group>"; };
+		EF28D74F1F915790000E0144 /* Amazing Trees.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Amazing Trees.m4a"; sourceTree = "<group>"; };
+		EF28D7501F915790000E0144 /* Attack on Titan.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Attack on Titan.m4a"; sourceTree = "<group>"; };
+		EF28D7511F915790000E0144 /* Bios.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bios.m4a; sourceTree = "<group>"; };
+		EF28D7521F915790000E0144 /* BLUE DRAGON.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BLUE DRAGON.m4a"; sourceTree = "<group>"; };
+		EF28D7531F915790000E0144 /* fiore.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = fiore.m4a; sourceTree = "<group>"; };
+		EF28D7541F915790000E0144 /* UNICORN.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = UNICORN.m4a; sourceTree = "<group>"; };
+		EF28D7561F9157D3000E0144 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		EF3F7A1F1F913C0300719334 /* QuestionData.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = QuestionData.json; sourceTree = "<group>"; };
 		EF3F7A221F913C8800719334 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		EF3F7A241F9142B600719334 /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
@@ -58,12 +80,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF28D7571F9157D3000E0144 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF28D74A1F915790000E0144 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				EF28D74B1F915790000E0144 /* 9a14s.m4a */,
+				EF28D74C1F915790000E0144 /* Ace and Arms.m4a */,
+				EF28D74D1F915790000E0144 /* aLIEz.m4a */,
+				EF28D74E1F915790000E0144 /* aLLu.m4a */,
+				EF28D74F1F915790000E0144 /* Amazing Trees.m4a */,
+				EF28D7501F915790000E0144 /* Attack on Titan.m4a */,
+				EF28D7511F915790000E0144 /* Bios.m4a */,
+				EF28D7521F915790000E0144 /* BLUE DRAGON.m4a */,
+				EF28D7531F915790000E0144 /* fiore.m4a */,
+				EF28D7541F915790000E0144 /* UNICORN.m4a */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		EF28D7551F9157D3000E0144 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EF28D7561F9157D3000E0144 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EFD993091F8B1ED1007692EC /* About */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,6 +146,7 @@
 		EFD9930C1F8B1F7B007692EC /* Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				EF28D74A1F915790000E0144 /* Sounds */,
 				EFD993141F8B1FED007692EC /* QuizViewController.swift */,
 				EF3F7A1F1F913C0300719334 /* QuestionData.json */,
 				EF3F7A221F913C8800719334 /* Question.swift */,
@@ -112,6 +161,7 @@
 			children = (
 				EFE2B0B51F89E6E500FB4673 /* nZk */,
 				EFE2B0B41F89E6E500FB4673 /* Products */,
+				EF28D7551F9157D3000E0144 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,6 +249,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF28D7581F915E28000E0144 /* 9a14s.m4a in Resources */,
+				EF28D7591F915E28000E0144 /* Ace and Arms.m4a in Resources */,
+				EF28D75A1F915E28000E0144 /* aLIEz.m4a in Resources */,
+				EF28D75B1F915E28000E0144 /* aLLu.m4a in Resources */,
+				EF28D75C1F915E28000E0144 /* Amazing Trees.m4a in Resources */,
+				EF28D75D1F915E28000E0144 /* Attack on Titan.m4a in Resources */,
+				EF28D75E1F915E28000E0144 /* Bios.m4a in Resources */,
+				EF28D75F1F915E28000E0144 /* BLUE DRAGON.m4a in Resources */,
+				EF28D7601F915E28000E0144 /* fiore.m4a in Resources */,
+				EF28D7611F915E28000E0144 /* UNICORN.m4a in Resources */,
 				EFE2B0C11F89E6E500FB4673 /* LaunchScreen.storyboard in Resources */,
 				EFE2B0BE1F89E6E500FB4673 /* Assets.xcassets in Resources */,
 				EFE2B0BC1F89E6E500FB4673 /* Main.storyboard in Resources */,

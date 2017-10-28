@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class QuizViewController: UIViewController {
 
@@ -21,8 +22,9 @@ class QuizViewController: UIViewController {
     @IBOutlet weak var resultButton: UIButton!
     
     @IBOutlet weak var resultViewTopConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var resultViewBottomConstraint: NSLayoutConstraint!
+    
+    var quizTrackPlayer:AVAudioPlayer?
     
     var currentQuestion:Question?
     
@@ -51,8 +53,13 @@ class QuizViewController: UIViewController {
             // Load state
             loadState()
             
-            // Display current question
-            displayCurrentQuestion()
+            // Load the track
+            loadTrack()
+            
+            // Play the track
+            playTrack()
+            
+            
         }
     }
 
@@ -61,12 +68,71 @@ class QuizViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func loadTrack() {
+        let quizTracklist = ["9a14s", "Ace and Arms", "aLIEz", "aLLu", "Amazing Trees", "Attack on Titan", "Bios", "BLUE DRAGON", "fiore", "UNICORN"]
+        
+        if let actualCurrentQuestion = currentQuestion {
+            // Create and initialize the sound players
+            do {
+                
+                let currentQuestionIndex = questions.index(of: actualCurrentQuestion)
+                let currentTrackTitle = quizTracklist[currentQuestionIndex!]
+                
+                let quizTrackPath = Bundle.main.path(forResource: currentTrackTitle, ofType: "m4a") // app bundle
+                // An app bundle is the delivery vessel for an app. It contains the compiled code and resources in a
+                // neat little package that is used for installation on a device.
+                let quizTrackUrl = URL(fileURLWithPath: quizTrackPath!)
+                quizTrackPlayer = try AVAudioPlayer(contentsOf: quizTrackUrl) // may throw error
+                
+            } // if any error is thrown, go to catch
+            catch {
+                // Sound player couldn't be created
+            }
+        }
+    }
+    
+    func playTrack() {
+        
+        // Track Fading in
+        quizTrackPlayer?.enableRate = true;
+        quizTrackPlayer?.rate = 1.0;
+        quizTrackPlayer?.play()
+        
+        // Set question label to alpha 0
+        questionLabel.alpha = 0
+        
+        // Set the question label
+        questionLabel.text = "音楽を聴いてください..."
+        
+        UIView.animate(withDuration: 2, delay: 0, options: .curveEaseOut, animations: {
+            
+            self.questionLabel.alpha = 1
+            
+        }, completion: { (Bool) -> Void in
+            UIView.animate(withDuration: 2, delay: 0, options: .curveEaseOut, animations: {
+                
+                self.questionLabel.alpha = 0
+                
+            }, completion: { (Bool) -> Void in
+                
+                // Remove the answer button
+                for view in self.answerStackView.arrangedSubviews {
+                    view.removeFromSuperview()
+                }
+                
+                // Display current question
+                self.displayCurrentQuestion()
+            })
+        })
+        
+    }
+    
     func displayCurrentQuestion() {
         
         if let actualCurrentQuestion = currentQuestion {
             
-            // Set question label to alpha 0
-            questionLabel.alpha = 0
+//            // Set question label to alpha 0
+//            questionLabel.alpha = 0
             
             // Set the question label
             questionLabel.text = actualCurrentQuestion.questionText
@@ -160,6 +226,7 @@ class QuizViewController: UIViewController {
             // Set the button text
             resultButton.setTitle("Next", for: .normal) // can be .disabled
             
+            
             // Set the constraint constants to shift the feedback view out of view
             resultViewTopConstraint.constant = 1000
             resultViewBottomConstraint.constant = -1000
@@ -186,6 +253,9 @@ class QuizViewController: UIViewController {
     
     @IBAction func resultButtonTapped(_ sender: Any) {
         
+        // Track Fading out
+        quizTrackPlayer?.setVolume(0, fadeDuration: 2)
+        
         // Remove the answer button
         for view in answerStackView.arrangedSubviews {
             view.removeFromSuperview()
@@ -199,12 +269,19 @@ class QuizViewController: UIViewController {
             if actualTitle == "Restart" {
                 // Restart the quiz
                 
+                // Reset the locally stored values
+                eraseState()
                 
                 // Set the current question to the first one
                 currentQuestion = questions[0]
                 
                 // Display the next question
-                displayCurrentQuestion()
+                
+                // Load the track
+                loadTrack()
+                
+                // Play the track
+                playTrack()
                 
                 // Get rid of the result screen
                 dimView.alpha = 0
@@ -233,7 +310,12 @@ class QuizViewController: UIViewController {
                 dimView.alpha = 0
                 
                 // Display the next question
-                displayCurrentQuestion()
+                
+                // Load the track
+                loadTrack()
+                
+                // Play the track
+                playTrack()
                 
             } else {
                 // Quiz is over
@@ -252,8 +334,6 @@ class QuizViewController: UIViewController {
                 // Display the feedback screen
                 dimView.alpha = 1
                 
-                // Reset the locally stored values
-                eraseState()
             }
         }
     }
