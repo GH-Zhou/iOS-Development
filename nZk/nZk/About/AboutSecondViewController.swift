@@ -1,14 +1,14 @@
 //
-//  AboutViewController.swift
+//  AboutSecondViewController.swift
 //  nZk
 //
-//  Created by Hendrik Zhou on 2017/10/8.
+//  Created by Hendrik Zhou on 2017/10/28.
 //  Copyright © 2017年 Northeastern University. All rights reserved.
 //
 
 import UIKit
 
-class AboutViewController: UIViewController {
+class AboutSecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
