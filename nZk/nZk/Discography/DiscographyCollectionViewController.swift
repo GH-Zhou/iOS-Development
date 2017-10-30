@@ -25,6 +25,9 @@ class DiscographyCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Create a UIImageView and add it to the navigation bar
+        createTitleIcon()
+        
         // width of cell = (the width of coleectionView's frame - paddings) / numberOfItemsPerRow
         let width = ((collectionView!.frame.width) - 4 * leftAndRightPaddings) / numberOfItemsPerRow
         
@@ -65,6 +68,26 @@ class DiscographyCollectionViewController: UICollectionViewController {
         
         // Trigger the segue to go to the discography detail view
         performSegue(withIdentifier: "goToDiscographyDetail", sender: self)
+    }
+    
+    func createTitleIcon() {
+        
+        // Create the UIImageView
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Create constraints
+        let heightConstraint = NSLayoutConstraint(item: imageView, attribute: .height, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 55)
+        let widthConstraint = NSLayoutConstraint(item: imageView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 55)
+        
+        // Add constraints
+        imageView.addConstraints([heightConstraint, widthConstraint])
+        
+        // Set the image
+        imageView.image = UIImage(named: "nZkLogo")
+        
+        // Add it to the navigation bar
+        navigationItem.titleView = imageView
     }
     
     // MARK: - Navigation

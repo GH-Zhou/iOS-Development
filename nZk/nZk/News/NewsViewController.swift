@@ -32,6 +32,7 @@ class NewsViewController: UIViewController, FeedModelDelegate, UITableViewDelega
         
         // Create a UIImageView and add it to the navigation bar
         createTitleIcon()
+        
     }
     
     func createTitleIcon() {

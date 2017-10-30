@@ -69,11 +69,13 @@ class AnswerButton: UIStackView {
         
         // Set the answer label
         answerLabel.text = answerText
+        answerLabel.font = answerLabel.font.withSize(20)
     }
     
     func setNumberLabel(answerNumber:Int) {
         // Set the number label
         numberLabel.text = String(answerNumber)
+        numberLabel.font = numberLabel.font.withSize(20)
     }
     
 }
